@@ -5,14 +5,14 @@
 
 makeCacheMatrix <- function(x = matrix()) {
 
-      #init save matrix & inverse_matrix to null
+      #save matrix given to my_matrix & set inverse of matrix to null
       my_matrix<<-x
       my_inv_matrix<<-NULL
       
-      #get matrix
+      #get matrix 
       getmatrix <- function() my_matrix
       
-      #set the inverse of matrix
+      #set the inverse of matrix and get the inverse of the matrix
       setInverse <- function(inv) my_inv_matrix <<-inv 
       
       getInverse <-function() my_inv_matrix
@@ -29,10 +29,10 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
       
-      # Inverse of the matrix
+      # Inv = the Inverse of the matrix 
       inv<-x$getInverse()
      
-      # Check if the inverse exists
+      # Check if the inverse exists, has been calculated before
       if(!is.null(inv)) {
             message("Inverse of the Matrix exists! Show previous results")
             # returns the previous inverse cached
