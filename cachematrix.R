@@ -2,8 +2,9 @@
 ## functions do
 
 ## Write a short comment describing this function
-## Create maxtrix to cache inverse
+
 makeCacheMatrix <- function(x = matrix()) {
+
       #init save matrix & inverse_matrix to null
       my_matrix<<-x
       my_inv_matrix<<-NULL
@@ -18,6 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
       
       #Return list of functions
       list(getmatrix=getmatrix, setInverse=setInverse, getInverse=getInverse)
+
 
 }
 
