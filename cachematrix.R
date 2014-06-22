@@ -28,4 +28,21 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+      
+      # Inverse of the matrix
+      inv<-x$getInverse()
+     
+      # Check if the inverse exists
+      if(!is.null(inv)) {
+            message("Inverse of the Matrix exists! Show previous results")
+            # returns the previous inverse cached
+            return(inv)
+      }
+      # If not, the inverse matrix is calculated
+      inv<-solve(x$getmatrix (), ...)
+      # caches the calculated inverse matrix
+      x$setInverse(inv)
+      # returns the inverse matrix
+      inv
+      
 }
